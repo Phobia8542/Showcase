@@ -8,10 +8,10 @@ ping -c1 192.168.1.1
         echo NOT OK
         fi
 
-Change the IP to 192.168.1.235
+# Change the IP to 192.168.1.235
 
 
-Don't show the output
+# Don't show the output
 ping -c1 192.168.1.1 &> /dev/null
         if [ $? -eq 0 ]
         then
@@ -21,7 +21,7 @@ ping -c1 192.168.1.1 &> /dev/null
         fi
 
 
-Define variable
+# Define variable
 #!/bin/bash
 
 hosts="192.168.1.1"
@@ -33,12 +33,12 @@ ping -c1 $hosts &> /dev/null
         echo $hosts NOT OK
         fi
 
-Change the IP to 192.168.1.235
+# Change the IP to 192.168.1.235
 
 
 
 
-Multiple IPs
+# Multiple IPs
 #!/bin/bash
 
 IPLIST="path_to_the_Ip_list_file"
