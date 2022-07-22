@@ -1,0 +1,45 @@
+Steps to set up SFTP on raspberry pi
+
+# Install packages
+sudo apt-get install openssh-server
+sudo apt-get install openssh-sftp-server
+
+# Create & set user permissions
+sudo useradd -m sftpuser
+sudo passwd sftpuser
+sudo groupadd sftpgroup
+sudo usermod -a -G sftpgroup sftpuser
+
+# Test login
+sudo login sftpuser
+
+# lock user functionality (no shell) 
+sudo usermod -s /usr/sbin/nologin sftpuser
+
+cd /srv/
+sudo mkdir sftp
+sudo chgrp sftpgroup sftp
+
+cd sftp
+sudo mkdir shared
+sudo chgrp sftpgroup shared/
+sudo chmod 770 shared
+# 776 is optional depending on your prefences
+# files uploaded to server will be grouped to sftpuser
+
+sudo vim /etc/ssh/sshd_config
+# within sshd_config
+
+# Below override default subsystem
+Subsystem	sftp	interal-sftp
+
+# Below Match User anoncvs
+
+# Security settings for sftp 
+Match user sftpuser
+ForceCommand internal-sftp
+AllowTcpForwarding no
+ChrootDirectory /srv/sftp/
+
+sudo systemctl restart ssh
+
