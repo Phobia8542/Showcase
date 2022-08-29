@@ -1,0 +1,80 @@
+# Raspberry pi set up
+# Later to be automated
+
+Packages to install
+# openssh-server 
+# openssh-sftp-server
+# ssh - will include openssh
+# raspi-config
+# ufw
+# fail2ban
+# vim - if not installed by default
+
+Enable SSH
+# raspi-config
+# interface options > SSH > enable
+
+Set root password
+# sudo su passwd
+Create new user & assign groups - remove permissions
+# sudo adduser username
+# sudo gpasswd -a username adm
+# sudo gpasswd -a username sudo
+# sudo visudo
+Below @includedir /etc/sudoers.d - TAB after username
+# username	ALL=(ALL) NOPASSWD: ALL
+Enable auto login - optional
+# raspi-config > system options > Boot/auto login > desktop autologin
+
+Create sftp server/user & set user permissions
+# sudo groupadd sftp 
+# sudo useradd -m sftpusername -G sftp
+# sudo passwd sftpuser
+# sudo chmod 700 /home/sftpusername
+Test login
+# sudo login sftpuser
+Test sftp login
+# sftp sftpusername@x.x.x.x
+
+Set up ufw - firewall
+# ufw allow 22/tcp comment "SSH"
+# ufw allow 8080/tcp comment "Web Server"
+# ufw status
+# sudo vim /etc/ssh/sshd_config
+Inside /etc/ssh/sshd_config
+Below Examples of overriding settings
+# Security settings for sftp 
+Match user sftp
+ForceCommand internal-sftp
+AllowTcpForwarding no
+ChrootDirectory /home/sftp/
+X11Forwarding no
+
+Configure fail2ban jail
+# sudo vim /etc/fail2ban/jail.local
+Within jail.local
+[DEFAULT]
+bantime = 1h
+banaction = ufw
+[sshd]
+enabled = true
+
+Lock default user - optional - recommended
+# passwd -l pi
+
+Enabling & restarting services
+# sudo systemctl enable fail2ban.service
+# sudo systemctl enable ufw.service
+# sudo systemctl restart fail2ban.service
+# sudo systemctl restart ufw.service
+# sudo systemctl restart sshd
+Check status of services
+# sudo systemctl status ssh 
+# sudo systemctl status fail2ban 
+# sudo systemctl status ufw 
+
+lock user functionality (no shell) - optional
+# sudo usermod -s /usr/sbin/nologin sftpuser
+
+Troubleshooting ssh
+# sshd -T
