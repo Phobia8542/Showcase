@@ -10,6 +10,7 @@ Terminal installs - all tools can be found on github
 # dirsearch - sudo apt-get install dirsearch
 # dnsgen - sudo apt-get install dnsgen
 # dnsx - sudo apt-get install dnsx / go install -v github.com/projectdiscovery/dnsx/cmd/dnsx@latest
+# enum4linux - sudo apt-get install enum4linux
 # eyewitness - sudo apt-get install eyewitness
 # fail2ban - sudo apt-get install fail2ban
 # feroxbuster - sudo apt-get install feroxbuster
@@ -29,11 +30,13 @@ Terminal installs - all tools can be found on github
 # massdns - sudo apt-get install massdns
 # meg - go install github.com/tomnomnom/meg@latest
 # naubu - go install -v github.com/projectdiscovery/naabu/v2/cmd/naabu@latest
+# netcat - sudo apt-get install netcat
 # nikto - sudo apt-get install nikto
 # nmap - sudo apt-get install nmap-common
 # nuclei - sudo apt-get install nuclei
 # openvpn - sudo apt-get install openvpn
 # pip - sudo apt-get install pip
+# pwncat - sudo apt-get install pwncat
 # python3 - sudo apt-get install python3
 # rasp-config - sudo apt-get install raspi-config 
 # recon-ng - sudo apt-get install recon-ng
