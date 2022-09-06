@@ -30,7 +30,7 @@ Terminal installs - all tools can be found on github
 # massdns - sudo apt-get install massdns
 # meg - go install github.com/tomnomnom/meg@latest
 # naubu - go install -v github.com/projectdiscovery/naabu/v2/cmd/naabu@latest
-# netcat - sudo apt-get install netcat
+# netcat - sudo apt-get install netcat-traditional
 # nikto - sudo apt-get install nikto
 # nmap - sudo apt-get install nmap-common
 # nuclei - sudo apt-get install nuclei
