@@ -2,7 +2,7 @@
 # Will be automated
 
 Terminal installs - all tools can be found on github
-# amass - sudo apt-get install / sudo snap install amass
+# amass - sudo apt-get install amass / sudo snap install amass
 # assetfinder - sudo apt-get install assetfinder
 # cewl - sudo apt-get install cewl
 # CORScanner - sudo pip install corscanner / sudo pip install cors / git clone https://github.com/chenjj/CORScanner.git
