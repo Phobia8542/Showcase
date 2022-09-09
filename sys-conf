@@ -18,7 +18,7 @@ Terminal installs - all tools can be found on github
 # git - sudo apt-get install git
 # gobuster - sudo apt-get install gobuster
 # go / golang - sudo apt-get install golang-go / sudo snap install go --classic / go install -v github.com/projectdiscovery/nuclei/v2/cmd/nuclei@latest
-# hash-identifier - sudo apt-get install hash-identifier
+# hashid - sudo apt-get install hashid
 # httprobe - sudo apt-get install httprobe
 # httpx - sudo apt-get install httpx-toolkit / go install -v github.com/projectdiscovery/httpx/cmd/httpx@latest
 # hydra - sudo apt-get install hydra
