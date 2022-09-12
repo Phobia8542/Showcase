@@ -6,13 +6,17 @@ Terminal installs - all tools can be found on github
 # assetfinder - sudo apt-get install assetfinder
 # cewl - sudo apt-get install cewl
 # CORScanner - sudo pip install corscanner / sudo pip install cors / git clone https://github.com/chenjj/CORScanner.git
+# cryptcat - sudo apt-get install cryptcat
 # dirb - sudo apt-get install dirb
 # dirsearch - sudo apt-get install dirsearch
+# dnsenum - sudo apt-get install dnsenum
 # dnsgen - sudo apt-get install dnsgen
+# dnsrecon - sudo apt-get install dnsrecon
 # dnsx - sudo apt-get install dnsx / go install -v github.com/projectdiscovery/dnsx/cmd/dnsx@latest
 # enum4linux - sudo apt-get install enum4linux
 # eyewitness - sudo apt-get install eyewitness
 # fail2ban - sudo apt-get install fail2ban
+# fcrackzip - sudo apt-get install frackzip 
 # feroxbuster - sudo apt-get install feroxbuster
 # ffuf - sudo apt-get install ffuf
 # git - sudo apt-get install git
