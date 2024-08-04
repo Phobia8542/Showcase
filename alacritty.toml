@@ -117,4 +117,4 @@ multiplier = 3
 
 [shell]
 args = ["--login"]
-program = "/usr/bin/zsh"
+program = "/usr/bin/fish"
